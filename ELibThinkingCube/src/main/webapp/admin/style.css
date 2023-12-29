@@ -1,0 +1,19 @@
+.ebooks{
+	color: #1a237e ;
+}
+.btn-custom{
+	background-color: #3949ab;
+	border-radius: 20px;
+}
+.bg-custom{
+	background-color: #303f9f;
+}
+.navbar .home{
+	background-color: lavender;
+	border-radius: 15px;
+}
+.navbar .nav-item:hover .nav-link{
+	background-color: white;
+	color: #303f9f;
+	border-radius: 15px;
+}
