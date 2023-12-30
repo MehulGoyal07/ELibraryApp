@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="all_components/style.css" />
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <style>
 .bg {
 	background: rgb(2, 0, 36);
@@ -16,25 +18,52 @@
 				<i class="fa-solid fa-book"></i> Thinking Cube
 			</h3>
 		</div>
-		<div class="col-md-6">
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search"
-					placeholder="Search" aria-label="Search">
-				<button class="btn btn-custom text-white my-2 my-sm-0" type="submit">
-					<i class="fa-solid fa-magnifying-glass"></i> Search
-				</button>
-			</form>
-		</div>
-		<div class="col-md-3">
-			<a href="login.jsp" class="btn btn-custom text-white"><i
-				class="fa-solid fa-right-to-bracket"></i> Login</a> <a
-				href="register.jsp" class="btn btn-custom text-white"><i
-				class="fa-solid fa-id-card"></i> Register</a>
+		<div
+			class="col-md-3">
+			<c:if test="${not empty userobj }">
+				<a class="btn btn-custom text-white"><i class="fa-solid fa-user"></i>
+					${userobj.name}</a>
+				<a data-toggle="modal" data-target="#exampleModalCenter"
+					class="btn btn-custom text-white"><i
+					class="fa-solid fa-right-from-bracket text-white"></i> Logout</a>
+			</c:if>
+			<c:if test="${empty userobj }">
+				<a href="../login.jsp" class="btn btn-custom text-white"><i
+					class="fa-solid fa-right-to-bracket"></i> Login</a>
+				<a href="../register.jsp" class="btn btn-custom text-white"><i
+					class="fa-solid fa-id-card"></i> Register</a>
+			</c:if>
 		</div>
 	</div>
 </div>
 
-
+<!-- Logout Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1"
+	role="dialog" aria-labelledby="exampleModalCenterTitle"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" style="font-weight: bold;"
+					id="exampleModalLongTitle">Warning!</h5>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center">
+					<h4>Do you want to logout</h4>
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+					<a href="../logout" type="button" class="btn btn-primary">Logout</a>
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div>
+<!-- End Logout Modal -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarSupportedContent"

@@ -12,6 +12,9 @@
 <body
 	style="background: rgb(2, 0, 36); background: linear-gradient(119deg, rgba(2, 0, 36, 1) 0%, rgba(122, 205, 196, 1) 0%, rgba(71, 121, 131, 1) 98%);">
 	<%@include file="navbar.jsp"%>
+	<c:if test="${empty userobj}">
+		<c:redirect url="../login.jsp" />
+	</c:if>
 	<div class="caontainer p-3 mt-5">
 		<div class="row">
 			<div class="col-md-4 offset-md-4">

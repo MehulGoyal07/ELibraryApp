@@ -21,6 +21,9 @@
 <body
 	style="background: rgb(2, 0, 36); background: linear-gradient(119deg, rgba(2, 0, 36, 1) 0%, rgba(122, 205, 196, 1) 0%, rgba(71, 121, 131, 1) 98%);">
 	<%@include file="navbar.jsp"%>
+	<c:if test="${empty userobj}">
+		<c:redirect url="../login.jsp" />
+	</c:if>
 	<h2 class="text-center" style="margin-top: 10px; font-weight: bold;">All
 		Books</h2>
 	<c:if test="${not empty succMsg }">
@@ -62,7 +65,8 @@
 					<td><%=b.getStatus()%></td>
 					<td><a href="edit_books.jsp?id=<%=b.getBookId()%>"
 						class="btn btn-sm btn-primary"><i
-							class="fa-solid fa-pen-to-square"></i> Edit</a> <a href="../delete?id=<%=b.getBookId() %>"
+							class="fa-solid fa-pen-to-square"></i> Edit</a> <a
+						href="../delete?id=<%=b.getBookId()%>"
 						class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i>
 							Delete</a></td>
 				</tr>
