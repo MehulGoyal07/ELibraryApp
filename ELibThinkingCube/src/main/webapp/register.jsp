@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page isELIgnored="false" %>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -27,11 +27,11 @@
 							<h4 class="text-center">Registration Page</h4>
 							<c:if test="${not empty succMsg }">
 								<p class="text-center text-success">${succMsg }</p>
-								<c:remove var="succMsg" scope="session"/>
+								<c:remove var="succMsg" scope="session" />
 							</c:if>
 							<c:if test="${not empty failedMsg }">
 								<p class="text-center text-danger">${failedMsg }</p>
-								<c:remove var="failedMsg" scope="session"/>
+								<c:remove var="failedMsg" scope="session" />
 							</c:if>
 							<form action="register" method="post">
 								<div class="form-group">
@@ -63,7 +63,9 @@
 										id="exampleCheck1"> <label class="form-check-label"
 										for="exampleCheck1">Agree Terms and Conditions</label>
 								</div>
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<div class="text-center">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
 							</form>
 						</div>
 					</div>

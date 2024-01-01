@@ -16,7 +16,7 @@
 </head>
 <body>
 	<%@include file="all_components/navbar.jsp"%>
-	<div class="container-fluid body-bg">
+	<div class="container-fluid body-bg p-3">
 		<div class="container" style="height: 65vh; padding: 3rem;">
 			<div class="row">
 				<div class="col-md-4 offset-md-4">

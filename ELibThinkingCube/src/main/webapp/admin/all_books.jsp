@@ -27,7 +27,7 @@
 	<h2 class="text-center" style="margin-top: 10px; font-weight: bold;">All
 		Books</h2>
 	<c:if test="${not empty succMsg }">
-		<p class="text-center text-success">${succMsg}</p>
+		<p class="text-center text-success" style="color: white;">${succMsg}</p>
 		<c:remove var="succMsg" scope="session" />
 	</c:if>
 	<c:if test="${not empty failedMsg }">

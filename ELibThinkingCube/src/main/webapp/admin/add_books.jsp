@@ -66,7 +66,9 @@
 									name="bimg" type="file" class="form-control-file"
 									id="exampleFormControlFile1">
 							</div>
-							<button type="submit" class="btn btn-primary">Add</button>
+							<div class="text-center">
+								<button type="submit" class="btn btn-primary">Add</button>
+							</div>
 						</form>
 					</div>
 				</div>
