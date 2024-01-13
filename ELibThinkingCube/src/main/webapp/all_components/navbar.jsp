@@ -55,14 +55,6 @@
 			<li class="nav-item active"><a class="nav-link disabled"
 				href="all_old_book.jsp"><i class="fa-solid fa-book-open"></i> Old Books</a></li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0">
-			<button class="btn btn-custom text-white my-2 my-sm-0" type="submit">
-				<i class="fa-solid fa-gear"></i> Settings
-			</button>
-			<button class="btn btn-custom text-white my-2 my-sm-0 mL-1"
-				type="submit">
-				<i class="fa-solid fa-phone"></i> Contact Us
-			</button>
-		</form>
+		
 	</div>
 </nav>
